@@ -2,7 +2,7 @@ FROM alpine
 
 WORKDIR /work
 
-ENV K8S_VERSION=v1.12.7
+ENV K8S_VERSION=v1.17.0
 
 RUN apk add --no-cache bash curl docker python3 && \
     python3 -m ensurepip && \
