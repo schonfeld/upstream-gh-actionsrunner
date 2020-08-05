@@ -15,7 +15,7 @@ RUN apk add --no-cache bash curl docker python3 && \
 RUN pip3 --no-cache-dir install awscli && \
     rm -rf /var/cache/apk/*
 
-RUN curl -LO curl -LO https://storage.googleapis.com/kubernetes-release/release/$(echo $K8S_VERSION)/bin/linux/amd64/kubectl && \
+RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(echo $K8S_VERSION)/bin/linux/amd64/kubectl && \
   chmod +x ./kubectl
 
 COPY entrypoint.sh /work/entrypoint.sh
